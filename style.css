@@ -1,0 +1,135 @@
+@font-face {
+    font-family: google;
+    src: url(./font/SourceCodePro-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    font-family: google;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-size: 50px 50px;
+    background-image: 
+        linear-gradient(10deg, rgba(7, 123, 111, 0.8)1px, transparent 1px),
+        linear-gradient(10deg, rgba(29, 169, 160, 0.8)1px, transparent 1px)
+    ;
+   animation: animate 30s linear 0s infinite;
+}
+
+@keyframes animate {
+    from{
+        background-position: 0;
+    }to{
+        background-position: 100%;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 70%;
+    min-height: 80vh;
+    /* background-color: grey; */
+    border-radius: 10px;
+    background: radial-gradient(
+    circle,
+    rgb(14, 193, 217),
+    rgb(3, 82, 108),
+    rgb(2, 12, 12)
+);
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+input{
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.add button{
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    border: none;
+}
+.add-remove{
+    display: flex;
+    gap: 10px;
+}
+
+
+.list{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+    border-radius: 20px;
+    background-color: darkgrey;
+    width: 60vw;
+}
+
+.todo-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button:hover{
+    background-color:rgb(20, 125, 125);
+    transform: scale(0.8);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+@media (max-width: 425px) {
+    .add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+input{
+    width: 50vw;
+    height: fit-content;
+}
+
+.add button{
+    min-width: fit-content;
+}
+
+
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+}
